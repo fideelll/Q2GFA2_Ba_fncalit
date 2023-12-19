@@ -1,0 +1,136 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{  
+    display: flex;
+    padding-right: 10px;
+    padding: 10px;
+    margin: 0;
+    overflow:hidden;
+    background-color:#184682;
+    position: fixed;
+    min-height: fit-content;
+    width: 100%;
+    border-bottom: 5px solid #212c46;
+    justify-content: space-around;
+    z-index: 100;
+    
+    
+}
+
+section{   
+    background-color: #485185;
+    min-height: 100vh;
+    height: inherit;
+    overflow: hidden;
+    
+
+}
+
+.content {
+    position: fixed;
+    bottom: 45%;
+    background : rgba(3, 0, 0, 0.603);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    font-size: larger;
+    z-index: 100;
+    text-align: center;
+    
+  }
+
+.planets{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 90;
+    
+
+}
+
+#moon{
+    background-image: url(media/moon.gif);
+    width: 100px;
+    height: 100px;
+    animation:moonwalk 20s linear infinite;
+}
+
+@keyframes moonwalk{
+    0%  {transform:translate(-500px, -100px); }
+    50%{transform:translate(150px, 200px);}
+    100%{transform:translate(900px, 800px);}
+}
+
+#galaxy{
+    background-image: url(media/galaxy.gif);
+    width: 500px;
+    height: 500px;
+    animation:galaxypulsate 20s linear infinite;
+    position: absolute;
+    right: 35%;
+    bottom: 80px;
+}
+
+@keyframes galaxypulsate{
+    0%  {transform:skew(0); }
+    50%{transform:skew(15deg, 15deg);}
+    100%{transform:skew(0);}
+}
+#star{
+    background-image: url(media/star.gif);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 10%;
+    bottom: 80px;
+    animation:starscale 10s infinite;
+
+ 
+}
+
+@keyframes starscale{
+    0%  {transform:scale(1); }
+    50%{transform:scale(2);}
+    100%{transform:scale(1);}
+ 
+}
+#rock1{
+    background-image: url(media/rock1.png);
+    width: 100px;
+    height: 100px;
+    animation:asteroidspin 20s linear infinite;
+    position: absolute;
+    left: 300px;
+    top: 25px;
+ 
+}
+
+#rock2{
+    background-image: url(media/rock2.png);
+    width: 100px;
+    height: 100px;
+    animation:asteroidspin 100s linear infinite;
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+}
+
+#rock3{
+    background-image: url(media/rock3.png);
+    width: 250px;
+    height: 250px;
+    animation:asteroidspin 50s linear infinite;
+    position: absolute;
+    right: 60px;
+}
+
+@keyframes asteroidspin{
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+
+}
